@@ -19,7 +19,7 @@ Canonical URLs, the sitemap and the structured data all read one constant.
 Open `lib/content.ts` and set:
 
 ```ts
-export const SITE_URL = "https://fuadabusafi.com";
+export const SITE_URL = "https://fuad.run";
 ```
 
 Or set `NEXT_PUBLIC_SITE_URL` in your host's environment variables.
