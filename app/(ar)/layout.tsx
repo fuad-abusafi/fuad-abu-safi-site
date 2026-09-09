@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { buildMetadata } from "@/lib/seo";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "../fonts";
 
 export const metadata: Metadata = buildMetadata("ar");
@@ -9,5 +10,12 @@ export const viewport: Viewport = { themeColor: "#EDE7DC", width: "device-width"
 // <html> element itself — Google uses that to decide which language queries
 // this page should answer.
 export default function ArLayout({ children }: { children: React.ReactNode }) {
-  return <html lang="ar" dir="rtl"><body>{children}</body></html>;
+  return (
+    <html lang="ar" dir="rtl">
+      <body>
+        {children}
+        <SpeedInsights />
+      </body>
+    </html>
+  );
 }
